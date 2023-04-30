@@ -258,7 +258,7 @@ startBtn.addEventListener('click', () => {
     pause_Audio()
   }else {
     draw()
-    timerId = setInterval(moveDown, 1000)
+    timerId = setInterval(moveDown, 500)
     nextRandom =Math.floor(Math.random()*theTetrominoes.length)
     displayShape()
     play_Audio()
