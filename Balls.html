@@ -41,6 +41,7 @@ class Circle {
         context.lineWidth = 5;
         context.arc(this.position_x, this.position_y, this.radius, 0, Math.PI * 2);
         context.stroke();
+        context.fill();
         context.closePath();
     }
 
@@ -103,7 +104,7 @@ for (var i = 0; i < 20; i++) {
     a = all_circles.length;
   }
 
-  let my_circle = new Circle(random_x, random_y, radius, 10, 'Black', 'Mostafa');
+  let my_circle = new Circle(random_x, random_y, radius, 10, 'Black', ' ');
   all_circles.push(my_circle);
 }
 
