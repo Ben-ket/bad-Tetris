@@ -90,7 +90,7 @@ let randomNumber = function(min, max) {
 
 var all_circles = [];
 
-for (var i = 0; i < 20; i++) {
+for (var i = 0; i < 123; i++) {
 
   var radius = 25;
   var random_x = randomNumber(radius, (window_width - radius));
@@ -104,7 +104,7 @@ for (var i = 0; i < 20; i++) {
     a = all_circles.length;
   }
 
-  let my_circle = new Circle(random_x, random_y, radius, 10, 'Black', ' ');
+  let my_circle = new Circle(random_x, random_y, radius, 5, 'Purple', ' ');
   all_circles.push(my_circle);
 }
 
