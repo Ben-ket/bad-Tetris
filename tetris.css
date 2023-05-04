@@ -1,4 +1,10 @@
 /* css stands for cascading stylesheet*/
+#game {
+  text-align: center;
+
+}
+
+
 .container {
   display: flex;
 
