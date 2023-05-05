@@ -118,6 +118,7 @@ function moveDown(){
     draw()
     setTimeout(freeze, 200)
     }
+    }
 function moveDownInstant(){
 if (start) {
 
@@ -128,10 +129,10 @@ if (start) {
     draw()
     freeze()
    }
-    
+    }
 
 
-} 
+
 function moveDownFast(a){
   if (a.keyCode === 40){
     moveDown()
