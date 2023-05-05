@@ -108,6 +108,20 @@ for (var i = 0; i < 123; i++) {
   let my_circle = new Circle(random_x, random_y, radius, 7, 'Purple', ' ');
   all_circles.push(my_circle);
 }
+var radius = 25;
+  var random_x = randomNumber(radius, (window_width - radius));
+  var random_y = randomNumber(radius, (window_height - radius));
+
+  for( var a = 0; a < all_circles.length; a++) {
+    if ( (getDistance(random_x, random_y, all_circles[a].xpos, all_circles[a].ypos) - radius + all_circles[a].radius < 0) ) {
+      random_x = randomNumber(radius, (window_width-radius));
+      random_y = randomNumber(radius, (window_height-radius));
+    }
+    a = all_circles.length;
+  }
+
+  let my_circle = new Circle(random_x, random_y, radius, 7, 'Red', ' ');
+  all_circles.push(my_circle);
 
 
 
