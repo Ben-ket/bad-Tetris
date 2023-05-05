@@ -93,7 +93,6 @@ function undraw(){
 
 //ASIGN function for movements
 function control(e){
-if (start) {
   if (e.keyCode === 37){
     moveLeft()
    } else if (e.keyCode === 38){
@@ -103,7 +102,7 @@ if (start) {
    }else if (e.keyCode === 32){
     //slam()
    }
-  }
+
   
 }
   
@@ -163,6 +162,7 @@ function freeze(){
 //move the tetromino left without it teleporting
 
 function moveLeft() {
+if (start) {
   undraw()
   const isAtLeftEdge = current.some(index => (currentPosition + index) % width === 0)
   if(!isAtLeftEdge) currentPosition -=1
@@ -172,9 +172,11 @@ function moveLeft() {
   }
   draw()
 }
+}
 
 
   function moveRight() {
+if (start) {
   undraw()
 const isAtRightEdge = current.some(index => (currentPosition + index) % width === width-1 )
 
@@ -184,6 +186,7 @@ if (current.some(index => squares[currentPosition + index].classList.contains('t
   currentPosition -= 1
 }
 draw()
+}
 }
  ///FIX ROTATION OF TETROMINOS A THE EDGE 
  function isAtRight() {
@@ -211,6 +214,7 @@ function checkRotatedPosition(P){
 }
 //rotate tetromino
 function rotate()  {
+if (start) {
    undraw()
    currentRotation ++
    if(currentRotation === theTetrominoes[random].length){
@@ -218,6 +222,7 @@ function rotate()  {
    }
    current = theTetrominoes[random][currentRotation]
    draw()
+}
 }
 function slam(){
   timerId = setInterval(moveDown, 0)
