@@ -116,7 +116,7 @@ function moveDown(){
     undraw()
     currentPosition += width
     draw()
-    freeze()
+    setTimeout(freeze, 200)
     }
 } 
 function moveDownFast(a){
@@ -156,6 +156,8 @@ function freeze(){
 
   }
 }
+
+
 
 
 
