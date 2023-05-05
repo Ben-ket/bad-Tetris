@@ -11,7 +11,8 @@ const rightBtn = document.querySelector('#right-button');
 const width = 10
 let timerId;
 let nextRandom = 0;
-let score = 0
+let score = 0;
+let start = 0;
 const colors = ['red', 'orange', 'purple', 'cyan', 'green', 'yellow', 'blue']
 
 // The Tetris Blocks
@@ -92,15 +93,17 @@ function undraw(){
 
 //ASIGN function for movements
 function control(e){
-if (e.keyCode === 37){
-  moveLeft()
- } else if (e.keyCode === 38){
-  rotate()
- }else if (e.keyCode === 39){
-  moveRight()
- }else if (e.keyCode === 32){
-  //slam()
- }
+if (start) {
+  if (e.keyCode === 37){
+    moveLeft()
+   } else if (e.keyCode === 38){
+    rotate()
+   }else if (e.keyCode === 39){
+    moveRight()
+   }else if (e.keyCode === 32){
+    //slam()
+   }
+  }
   
 }
   
@@ -110,11 +113,12 @@ document.addEventListener('keydown', moveDownFast)
 
 
 function moveDown(){
-
+    if (start) {
     undraw()
     currentPosition += width
     draw()
     freeze()
+    }
 } 
 function moveDownFast(a){
   if (a.keyCode === 40){
@@ -262,6 +266,7 @@ startBtn.addEventListener('click', () => {
     nextRandom =Math.floor(Math.random()*theTetrominoes.length)
     displayShape()
     play_Audio()
+    start = 1
   }
 })
 //on screen control buttons
@@ -303,6 +308,7 @@ function addScore(){
 
       scoreDisplay.innerHTML = ' Game Over'
       clearInterval(timerId)
+      start = 0
     }
   }  
 
