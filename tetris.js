@@ -276,12 +276,13 @@ startBtn.addEventListener('click', () => {
     start = 1
   }
 })
+
 //on screen control buttons
 upBtn.addEventListener('click',() =>{
   rotate();
 })
 downBtn.addEventListener('click',() =>{
-  moveDown();
+  setTimeout(moveDown, 220)
 })
 leftBtn.addEventListener('click',() =>{
   moveLeft();
@@ -289,6 +290,8 @@ leftBtn.addEventListener('click',() =>{
 rightBtn.addEventListener('click',() =>{
   moveRight();
 })
+
+
 //add score
 function addScore(){
   for (let i = 0; i < 199; i+= width){
