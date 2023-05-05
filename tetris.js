@@ -118,6 +118,19 @@ function moveDown(){
     draw()
     setTimeout(freeze, 200)
     }
+function moveDownInstant(){
+if (start) {
+
+    undraw()
+
+    currentPosition += width
+
+    draw()
+    freeze()
+   }
+    
+
+
 } 
 function moveDownFast(a){
   if (a.keyCode === 40){
@@ -282,7 +295,7 @@ upBtn.addEventListener('click',() =>{
   rotate();
 })
 downBtn.addEventListener('click',() =>{
-  setTimeout(moveDown, 220)
+  moveDownInstant();
 })
 leftBtn.addEventListener('click',() =>{
   moveLeft();
