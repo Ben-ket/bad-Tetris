@@ -10,6 +10,7 @@ const leftBtn = document.querySelector('#left-button');
 const rightBtn = document.querySelector('#right-button');
 const highScore = document.querySelector('.high_score');
 const width = 10
+let highScoreSav = +localStorage.getItem('highscore');
 let timerId;
 let nextRandom = 0;
 let score = 0;
@@ -17,9 +18,8 @@ let start = 0;
 const colors = ['red', 'orange', 'purple', 'cyan', 'green', 'yellow', 'blue'];
 
     
-highScore.innerHTML = +localStorage.getItem('highscore');
-    console.log(localStorage.getItem('highscore'));
-    console.log(+localStorage.getItem('highscore'));
+highScore.innerHTML = highScoreSav;
+    console.log(+localStorage.getItem('highscore'),highScoreSav);
 
 // The Tetris Blocks
 const lTetromino = [
@@ -342,4 +342,5 @@ function addScore(){
             localStorage.setItem('highscore', score1)
             }}
     
+    console.log(+localStorage.getItem('highscore'),highScoreSav);
 })
