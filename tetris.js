@@ -14,7 +14,10 @@ let timerId;
 let nextRandom = 0;
 let score = 0;
 let start = 0;
-const colors = ['red', 'orange', 'purple', 'cyan', 'green', 'yellow', 'blue']
+const colors = ['red', 'orange', 'purple', 'cyan', 'green', 'yellow', 'blue'];
+
+    
+let hightScore.innerHTML = localStorage.getItem('hightscore');
 
 // The Tetris Blocks
 const lTetromino = [
@@ -333,7 +336,7 @@ function addScore(){
       scoreDisplay.innerHTML = ' Game Over'
       clearInterval(timerId)
       start = 0
-      
+      setHightScore()
     }
   }  
 
@@ -344,4 +347,5 @@ function addScore(){
         if(highScore < score){
             localStorage.setItem('highscore', score)
             }}
+    
 })
