@@ -338,13 +338,5 @@ function addScore(){
     }
   }  
 
-// High Score Setup
-function highscore(x) {
-    if(+x > +highScore.innerHTML){
-        highScore.innerHTML = +x
-    }
-
-
-
 
 })
