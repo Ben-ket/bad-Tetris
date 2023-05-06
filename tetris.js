@@ -18,7 +18,7 @@ const colors = ['red', 'orange', 'purple', 'cyan', 'green', 'yellow', 'blue'];
 
     
 highScore.innerHTML = localStorage.getItem('highscore');
-    console.log(localStorage.getItem('highscore');
+    console.log(localStorage.getItem('highscore'));
 
 // The Tetris Blocks
 const lTetromino = [
