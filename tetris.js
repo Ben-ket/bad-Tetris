@@ -338,5 +338,8 @@ function addScore(){
     }
   }  
 
+    highScore.innerHTML = highScore
+    
+    //high score save tings
 
 })
