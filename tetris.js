@@ -337,7 +337,7 @@ function addScore(){
     //high score save tings
     function setHighScore() {
         if(highScore < score){
-            localStorage.setItem('highscore', score.toString()
+            localStorage.setItem('highscore', score.toString())
             }}
     
 })
