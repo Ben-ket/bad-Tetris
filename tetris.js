@@ -8,6 +8,7 @@ const upBtn = document.querySelector('#up-button');
 const downBtn = document.querySelector('#down-button');
 const leftBtn = document.querySelector('#left-button');
 const rightBtn = document.querySelector('#right-button');
+const highScore = document.querySelector('.high_score');
 const width = 10
 let timerId;
 let nextRandom = 0;
@@ -329,15 +330,19 @@ function addScore(){
     //game over
   function gameOver() {
     if(current.some(index => squares[currentPosition + index].classList.contains('taken'))) {
-
+      let scoreSav = scoreDisplay.innerHTML
       scoreDisplay.innerHTML = ' Game Over'
       clearInterval(timerId)
       start = 0
+      highscore(scoresave);
     }
   }  
 
-
-
+// High Score Setup
+function highscore(x) {
+    if(+x > +highScore.innerHTML){
+        highScore.innerHTML = +x
+    }
 
 
 
