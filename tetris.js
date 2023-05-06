@@ -330,16 +330,18 @@ function addScore(){
     //game over
   function gameOver() {
     if(current.some(index => squares[currentPosition + index].classList.contains('taken'))) {
-      let scoreSav = scoreDisplay.innerHTML
       scoreDisplay.innerHTML = ' Game Over'
       clearInterval(timerId)
       start = 0
-      highscore(scoresave);
+      
     }
   }  
 
-    highScore.innerHTML = highScore
+    
     
     //high score save tings
-
+    function setHighScore() {
+        if(highScore < score){
+            localStorage.setItem('highscore', score)
+            }}
 })
