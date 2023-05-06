@@ -17,7 +17,7 @@ let start = 0;
 const colors = ['red', 'orange', 'purple', 'cyan', 'green', 'yellow', 'blue'];
 
     
-highScore.innerHTML = localStorage.getItem('highscore');
+highScore.innerHTML = +localStorage.getItem('highscore');
     console.log(localStorage.getItem('highscore'));
 
 // The Tetris Blocks
@@ -337,7 +337,7 @@ function addScore(){
     //high score save tings
     function setHighScore() {
         if(highScore < score){
-            localStorage.setItem('highscore', score)
+            localStorage.setItem('highscore', score.toString()
             }}
     
 })
