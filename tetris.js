@@ -18,6 +18,7 @@ const colors = ['red', 'orange', 'purple', 'cyan', 'green', 'yellow', 'blue'];
 
     
 highScore.innerHTML = localStorage.getItem('highscore');
+    console.log(localStorage.getItem('highscore');
 
 // The Tetris Blocks
 const lTetromino = [
@@ -120,20 +121,10 @@ function moveDown(){
     undraw()
     currentPosition += width
     draw()
-    setTimeout(freeze, 200)
-    }
-    }
-function moveDownInstant(){
-if (start) {
-
-    undraw()
-
-    currentPosition += width
-
-    draw()
     freeze()
-   }
+       }
     }
+
 
 
 
@@ -333,6 +324,7 @@ function addScore(){
     //game over
   function gameOver() {
     if(current.some(index => squares[currentPosition + index].classList.contains('taken'))) {
+      pause_Audio()
       scoreDisplay.innerHTML = ' Game Over'
       clearInterval(timerId)
       start = 0
