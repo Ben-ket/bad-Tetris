@@ -342,6 +342,7 @@ function addScore(){
         if(highScore < score){
             let score1 = score.toString()
             localStorage.setItem('highscore', score1)
+            console.log("worked")
             }}
     
     console.log(+localStorage.getItem('highscore'),highScoreSav);
