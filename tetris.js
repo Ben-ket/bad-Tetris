@@ -346,4 +346,5 @@ function addScore(){
             }}
     
     console.log(+localStorage.getItem('highscore'),highScoreSav);
+    console.log(localStorage.getItem('highscore'), "string " + highScoreSav)
 })
