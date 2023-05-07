@@ -85,7 +85,7 @@ let current = theTetrominoes [random][currentRotation]
 function draw(){
     current.forEach(index => {
         squares[currentPosition + index].classList.add('tetromino')
-        squares[currentPosition + index].style.backgroundColor = colors[red]
+        squares[currentPosition + index].style.backgroundColor = colors[random]
     })
 }
 function undraw(){
