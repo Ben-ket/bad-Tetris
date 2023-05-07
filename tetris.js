@@ -294,7 +294,7 @@ upBtn.addEventListener('click',() =>{
   rotate();
 })
 downBtn.addEventListener('click',() =>{
-  moveDownInstant();
+  moveDown();
 })
 leftBtn.addEventListener('click',() =>{
   moveLeft();
