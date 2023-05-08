@@ -83,7 +83,9 @@ let gameOutcome = document.querySelector('.gamecondition');
 let player_option = document.querySelector('.player_option');
 
 
-
+let classicScore = {Wins: 0,
+                    Losses: 0,
+                    Draws: 0}
 let wins = document.querySelector('.wins');
 let losses = document.querySelector('.losses');
 let ties = document.querySelector('.ties');
@@ -92,10 +94,12 @@ let paperBtn = document.querySelector('.paper-button');
 let scissorBtn = document.querySelector('.scissors-button');
 let autoPlayBtn = document.querySelector('.autoplay');
 let resetBtn = document.querySelector('.reset');
-
+let storage = JSON.parse(localStorage.getItem('score'));
 
 let gameCounter;
- console.log(JSON.parse(localStorage.getItem('score')))
+if(storage != null){
+   gameCounter = storage}else {gameCounter = classicScore};
+ 
 let rockpic = '<img src="images/Rock.png">'
 let paperpic = '<img src="images/Paper.png">'
 let scissorpic = '<img src="images/Scissors.png">'
