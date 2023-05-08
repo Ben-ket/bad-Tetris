@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<header>
+  <title>Calculator</title>
+  <style>
+    body{
+      background-color: #000;
+      font-family: Arial;
+      font-weight: 700;
+    }
+    .result{
+      color: #fff;
+      font-size: 25px;
+      height: 100px;
+  
+    }
+    .numbers{
+      background-color: #313131;
+      color: #fff;
+      border:none;
+      padding: 10px 15px;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: opacity 0.15s;
+      
+    }
+    .numberss {
+     display: inline-grid;
+     margin-right: 7px;
+     
+    }
+    .flex{
+      margin-bottom: 5px;
+    }
+    .zero {
+      padding-right: 60px;
+    }
+    .numberss button:hover{
+     opacity: 0.5;
+    }
+    .AC{
+      background-color: #9f9f9f;
+      color: #fff;
+      border:none;
+      padding: 10px 15px;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: opacity 0.15s;
+      margin-bottom: 5px;
+    }
+    .operators button{
+      background-color: #f69906;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: opacity 0.15s;
+      margin-bottom: 5px;
+    }
+    .operators button:hover{
+     opacity: 0.5;
+
+    }
+    .operators{
+      display: flex;
+      flex-direction: column;
+    }
+    
+  </style>
+</header>
+<body>
+<p class="result"></p>
+<div style="display: flex">
+  
+<div class="numberss">
+  <button class="AC">AC</button>
+  <div class="flex">
+    <button class="seven numbers">7</button>
+    <button class="eight numbers">8</button>
+    <button class="nine numbers">9</button>
+  </div>
+  <div class="flex">
+    <button class="four numbers">4</button>
+    <button class="five numbers">5</button>
+    <button class="six numbers">6</button>
+  </div>
+  <div class="flex">
+    <button class="one numbers">1</button>
+    <button class="two numbers">2</button>
+    <button class="three numbers">3</button>
+  </div>
+  <div class="flex">
+    <button class="zero numbers">0</button>
+    <button class="point numbers">.</button>
+  </div>
+  </div>
+<div class = "operators">
+    <button class="divide">&divide;</button>
+    <button class="multiply">x</button>
+    <button class="subtract">-</button>
+    <button class="add">+</button>
+    <button class="equals">=</button>
+</div>
+</div>
+</body>
+<script>
+
+let result = document.querySelector('.result');
+let AC = document.querySelector('.AC');
+let oneBtn = document.querySelector('.one');
+let twoBtn = document.querySelector('.two');
+let threeBtn = document.querySelector('.three');
+let fourBtn = document.querySelector('.four');
+let fiveBtn = document.querySelector('.five');
+let sixBtn = document.querySelector('.six');
+let sevenBtn = document.querySelector('.seven');
+let eightBtn = document.querySelector('.eight');
+let nineBtn = document.querySelector('.nine');
+let zeroBtn = document.querySelector('.zero');
+let pointBtn = document.querySelector('.point');
+let divideBtn = document.querySelector('.divide');
+let multiplyBtn = document.querySelector('.multiply');
+let subtractBtn = document.querySelector('.subtract');
+let addBtn = document.querySelector('.add');
+let equalBtn = document.querySelector('.equals');
+
+
+let btnControls = {
+  AC: function clearresult(){
+      result.innerHTML = ""
+     },
+  one: function oneaddtoresult(){
+    result.innerHTML += "1"
+  },
+  two: function twoaddtoresult(){
+    result.innerHTML +=  "2"
+  },
+  three: function threeadd(){
+    result.innerHTML +=  "3"
+  },
+  four: function fouradd(){
+    result.innerHTML +=  "4"
+  },
+  five: function fouradd(){
+    result.innerHTML +=  "5"
+  },
+  six: function fouradd(){
+    result.innerHTML +=  "6"
+  },
+  seven: function fouradd(){
+    result.innerHTML +=  "7"
+  },
+  eight: function fouradd(){
+    result.innerHTML +=  "8"
+  },
+  nine: function fouradd(){
+    result.innerHTML +=  "9"
+  },
+  zero: function fouradd(){
+    result.innerHTML +=  "0"
+  },
+  plus: function addnumbersyaaay(){
+    result.innerHTML += " + "
+  },
+  minus: function addnumbersyaaay(){
+    result.innerHTML += " - "
+  },
+  divide: function addnumbersyaaay(){
+    result.innerHTML += " / "
+  },
+  times: function addnumbersyaaay(){
+    result.innerHTML += " * "
+  },
+  point: function addnumbersyaaay(){
+    result.innerHTML += "."
+  },
+  equal: function fmlammadie(){
+    
+   result.innerHTML = eval(result.innerHTML) 
+  }
+    
+  }
+
+
+
+AC.addEventListener('click', btnControls.AC)
+oneBtn.addEventListener('click', btnControls.one)
+twoBtn.addEventListener('click', btnControls.two)
+threeBtn.addEventListener('click', btnControls.three)
+fourBtn.addEventListener('click', btnControls.four)
+fiveBtn.addEventListener('click', btnControls.five)
+sixBtn.addEventListener('click', btnControls.six)
+sevenBtn.addEventListener('click', btnControls.seven) 
+eightBtn.addEventListener('click', btnControls.eight) 
+nineBtn.addEventListener('click', btnControls.nine)
+zeroBtn.addEventListener('click', btnControls.zero)
+pointBtn.addEventListener('click', btnControls.point) 
+divideBtn.addEventListener('click', btnControls.divide)
+multiplyBtn.addEventListener('click', btnControls.times)
+subtractBtn.addEventListener('click', btnControls.minus)
+addBtn.addEventListener('click', btnControls.plus)
+equalBtn.addEventListener('click', btnControls.equal)
+</script>
+</html>

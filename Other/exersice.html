@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <header> 
+    <title>Projects lool</title>
+    <style>
+      p{
+        font-family: Arial;
+      }
+      
+      .subscribe{
+        background-color: black;
+        font-weight: 700;
+        color: white;
+        border-radius: 20px;
+        padding: 10px 15px;
+        border: none;
+        cursor: pointer;
+      }
+      .is-subscribed{
+        background-color: white;
+        color: black;
+      }
+      .calculate{
+        border: none;
+        background-color: green;
+        color: white;
+        padding: 12px 15px;
+        font-size: 15px;
+        cursor: pointer;
+      }
+      input{
+        padding: 10px;
+        font-size: 15px;
+      }
+    </style>
+  </header>
+<body>
+  <h style="font-size: 50px; font-family: Arial;">Video Time : 5:08:00</h>
+<p>YouTube Subscribe Button</p>
+<button class="subscribe">Subscribe</button>
+
+
+<p style="margin-top: 50px;">Amazon Shipping Calculator</p>
+<p>Orders under $40 = +$10 shipping.</p>
+<p>Orders over $40 = FREE shipping.</p>
+<input placeholder="Cost of order"> <button class="calculate">Calculate</button>
+<p class="result"></p>
+
+
+<p style="margin-top: 55px;">Rock Paper Scissors</p>
+<a href="RPS.html" target="_blank" style="font-family:Arial">Click here</a>
+
+<p style="margin-top: 55px;">Calculator</p>
+<a href="Calculator.html" target="_blank" style="font-family:Arial">Click here</a>
+
+<p style="margin-top: 55px;">To do List</p>
+<a href="To-do-list.html" target="_blank" style="font-family:Arial">Click here</a>
+
+</body>
+<script>
+const subscribeBtn = document.querySelector('.subscribe');
+const subscribedBtn = document.querySelector('.is-subscribe');
+const calculateBtn = document.querySelector('.calculate');
+const costofOrder = document.querySelector('input');
+const result = document.querySelector('.result');
+
+subscribeBtn.addEventListener('click', click);
+calculateBtn.addEventListener('click', calculate);
+
+function click(){
+    if (subscribeBtn.innerHTML === "Subscribe"){
+      subscribeBtn.innerHTML = "Subscribed"
+    }else {subscribeBtn.innerHTML = "Subscribe"}
+ 
+
+}
+function calculate(){
+  let i = +costofOrder.value
+  if(i < 40 && costofOrder.value != ""){
+    i += 10
+    result.innerHTML = "$" + i
+  }else if (i >= 40 ){
+    result.innerHTML = "$" + i
+  }
+  console.log(+costofOrder.value + 10)
+
+}
+
+
+</script>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body{
+      font-family: Arial;
+    }
+  </style>
+  <title>To Do List</title>
+</head>
+<body>
+  <p>Todo List Practise 1</p>
+
+  <input placeholder="Todo Name" class="todoinput">
+  <button class="addbtn">Add</button>
+<br> <br>
+  <p>Todo List Practise 1</p>
+
+  <input placeholder="Todo Name" class="todoinput">
+  <button class="addbtn">Add</button>
+</body>
+<script>
+const todoInput = document.querySelector('.todoinput');
+const addBtn = document.querySelector('.addbtn');
+let todoval;
+
+let Todo1 = [];
+
+addBtn.addEventListener('click', () =>{
+  todoval = todoInput.value; 
+  if(todoval !== ""){
+    addTodo()
+    console.log(Todo1)
+    todoInput.value = ""
+  }
+  
+})
+function addTodo(){
+ Todo1.push(todoval)
+}
+</script>
+</html>
