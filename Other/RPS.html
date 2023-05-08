@@ -94,7 +94,8 @@ let autoPlayBtn = document.querySelector('.autoplay');
 let resetBtn = document.querySelector('.reset');
 
 
-let gameCounter = JSON.parse(localStorage.getItem('score'));
+let gameCounter;
+ console.log(JSON.parse(localStorage.getItem('score')))
 let rockpic = '<img src="images/Rock.png">'
 let paperpic = '<img src="images/Paper.png">'
 let scissorpic = '<img src="images/Scissors.png">'
